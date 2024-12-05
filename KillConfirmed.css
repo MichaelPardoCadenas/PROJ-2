@@ -1,0 +1,57 @@
+body{
+  background-image: url('image/background.png');
+  background-size: cover;
+}
+
+
+
+.page {
+  margin: 0 auto;
+  margin-top: 5vw;
+  width: 1000px;
+  height: 550px;
+  flex-wrap: wrap;
+  background-position: center;
+  background-size: cover;
+  display: none; /* Ocultamos por defecto */
+  border-radius: 7%;
+}
+
+.start-page {
+  background-image: url('/image/start.png');
+}
+
+.rules-page {
+  background-image: url('/image/rules.png');
+  
+}
+
+.game-page {
+  background-image: url('/image/game.png');
+  display: block;
+}
+
+.victory-page {
+  background-image: url('/image/victory.png');
+}
+
+.defeat-page {
+  background-image: url('/image/defeat.png');
+}
+
+.game-header {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  color: white; /* Asegúrate de que se vea bien sobre cualquier fondo */
+}
+
+.game-area {
+  width: 100%;
+  height: calc(100% - 50px); /* Espacio restante debajo del encabezado */
+  position: relative;
+}

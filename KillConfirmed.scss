@@ -1,0 +1,269 @@
+body {
+  background-image: url("image/background.png");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  .page {
+    margin: 0 auto;
+    margin-top: 15vh;
+    width: 95%;
+    max-width: 1100px;
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    display: none;
+    border-radius: 7%;
+    position: relative;
+
+    &.start-page {
+      background-image: url("image/start.png");
+      display: block;
+    }
+
+    &.rules-page {
+      background-image: url("image/rules.png");
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    &.game-page {
+      background-image: url("image/game.png");
+    }
+
+    &.victory-page {
+      background-image: url("image/victory.png");
+    }
+
+    &.defeat-page {
+      background-image: url("image/defeat.png");
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container .page {
+    margin-top: 10vh;
+    width: 95%;
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container .page {
+    margin-top: 15vh;
+    width: 90%;
+    height: 80vh;
+  }
+}
+
+.game-header {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 20px;
+  color: white;
+  padding: 10px 15px;
+  background-color: black;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-size: 1.5vw;
+
+  @media screen and (max-width: 768px) {
+    font-size: 4vw;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 6vw;
+  }
+
+  .score,
+  .timer,
+  .lives {
+    font-weight: bold;
+    color: #39FF14;
+  }
+}
+
+.game-area {
+  width: 100%;
+  height: calc(100% - 50px);
+  position: relative;
+}
+
+.character {
+  position: absolute;
+  width: 12vw;
+  height: 12vw;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  &.enemy {
+    background-image: url("image/diddy.png");
+    border: 2px solid red;
+  }
+
+  &.ally {
+    background-image: url("image/lamine.png");
+    border: 2px solid blue;
+  }
+}
+
+button {
+  font-family: "Arial", sans-serif;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  background-color: #39FF14;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:hover {
+    background-color: #28d900;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    background-color: #1e9c00;
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.start-page {
+  #nextScreenButton {
+    background-color: #39FF14;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:hover {
+      background-color: #28d900;
+      transform: translateX(-50%) translateY(-3px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+      background-color: #1e9c00;
+      transform: translateX(-50%) translateY(1px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  #startGameButton {
+    background-color: #39FF14;
+  }
+}
+
+.rules-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  gap: 15px;
+  width: auto;
+
+  button {
+    margin-left: 0;
+  }
+
+  #backToStartButton,
+  #startGameButton {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  #startGameButton {
+    left: calc(50% + 100px);
+    background-color: #28a745;
+  }
+
+  #backToStartButton {
+    left: calc(50% - 100px);
+    background-color: #dc3545;
+  }
+
+  @media screen and (max-width: 768px) {
+    justify-content: flex-end;
+    padding: 10px;
+
+    button {
+      font-size: 1.2rem;
+      padding: 12px 25px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    justify-content: flex-end;
+    padding: 10px;
+
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+}
+
+.victory-page {
+  #playAgainButton {
+    background-color: #39FF14;
+  }
+}
+
+.defeat-page {
+  #retryButton {
+    background-color: #39FF14;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-position: top center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-size: cover;
+  }
+}

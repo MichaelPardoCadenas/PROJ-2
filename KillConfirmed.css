@@ -27,13 +27,10 @@ body {
 
 .container .page.rules-page {
   background-image: url("image/rules.png");
-  padding: 20px;
-  box-sizing: border-box;
-
 }
 
 .container .page.game-page {
-  background-image: url("image/game.png");
+  background-image: url("image/backgroundGame.png");
 }
 
 .container .page.victory-page {
@@ -125,12 +122,10 @@ body {
 
 .enemy {
   background-image: url("image/diddy.png");
-  border: 2px solid red;
 }
 
 .ally {
   background-image: url("image/lamine.png");
-  border: 2px solid blue;
 }
 
 button {
@@ -163,7 +158,7 @@ button:active {
 .start-page #nextScreenButton {
   background-color: #39FF14;
   position: absolute;
-  bottom: 50px;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   padding: 15px 30px;
@@ -214,9 +209,12 @@ button:active {
 }
 
 
-.victory-page #playAgainButton,
-.defeat-page #retryButton {
+.victory-page #playAgainButton {
   background-color: #39FF14;
+}
+
+.defeat-page #retryButton {
+  background-color: #dc3545;
 }
 
 .rules-page {
@@ -266,5 +264,73 @@ button:active {
     padding: 10px 20px;
   }
 }
+
+
+body,
+button,
+img,
+a,
+.game-page,
+.character {
+  cursor: url('./image/cruceta.png') 32 32, default;
+}
+
+.victory-page {
+  color: #1e9c00;
+  text-align: center;
+}
+
+.defeat-page {
+  color: #dc3545;
+  text-align: center;
+}
+
+
+.tuPuntuacionDerrota {
+  font-size: 1.5rem;
+  /* Reduce el tamaño del texto */
+  color: #ffffff;
+  /* Color del texto */
+  text-align: center;
+  /* Centra el texto horizontalmente */
+  background-color: #333333;
+  /* Fondo oscuro del cuadro */
+  border: 4px solid #dc3545;
+  /* Borde rojo */
+  border-radius: 10px;
+  /* Esquinas redondeadas */
+  padding: 10px;
+  /* Reduce el espaciado interno del cuadro */
+  margin: 10px auto;
+  /* Centra el cuadro con menor espacio exterior */
+  display: inline-block;
+  /* Ajusta el tamaño del cuadro al contenido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Sombra ligera */
+}
+
+.tuPuntuacionVictoria {
+  font-size: 1.5rem;
+  /* Reduce el tamaño del texto */
+  color: #ffffff;
+  /* Color del texto */
+  text-align: center;
+  /* Centra el texto horizontalmente */
+  background-color: #333333;
+  /* Fondo oscuro del cuadro */
+  border: 4px solid #39FF14;
+  /* Borde rojo */
+  border-radius: 10px;
+  /* Esquinas redondeadas */
+  padding: 10px;
+  /* Reduce el espaciado interno del cuadro */
+  margin: 10px auto;
+  /* Centra el cuadro con menor espacio exterior */
+  display: inline-block;
+  /* Ajusta el tamaño del cuadro al contenido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Sombra ligera */
+}
+
 
 /*# sourceMappingURL=KillConfirmed.css.map */

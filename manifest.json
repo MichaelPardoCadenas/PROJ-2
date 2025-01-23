@@ -2,7 +2,7 @@
     "name": "Kill Confirmed",
     "short_name": "KillConf",
     "description": "Un juego de disparos en el que debes obtener puntos golpeando enemigos y evitando aliados.",
-    "start_url": "/index.html",
+    "start_url": "https://tubular-genie-3fd697.netlify.app/index.html",
     "display": "standalone",
     "background_color": "#000000",
     "theme_color": "#39ff14",
@@ -19,7 +19,9 @@
         "type": "image/png"
       }
     ],
-    "scope": "/",
-    "lang": "es-ES"
+    "iconUrl": "https://tubular-genie-3fd697.netlify.app/image/gun.png",
+    "scope": "https://tubular-genie-3fd697.netlify.app/",
+    "lang": "es-ES",
+    "host": "tubular-genie-3fd697.netlify.app"
   }
   
